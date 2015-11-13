@@ -2,11 +2,12 @@
 #define SRC_XML_TEXT_H_
 
 #include "libxmljs.h"
+#include "xml_fraternal_node.h"
 #include "xml_node.h"
 
 namespace libxmljs {
 
-class XmlText : public XmlNode {
+class XmlText : public XmlFraternalNode {
 public:
   explicit XmlText(xmlNode *node);
 

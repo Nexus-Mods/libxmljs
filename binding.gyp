@@ -18,6 +18,7 @@
         'src/libxmljs.cc',
         'src/xml_attribute.cc',
         'src/xml_document.cc',
+        'src/xml_fraternal_node.cc',
         'src/xml_element.cc',
         'src/xml_comment.cc',
         'src/xml_namespace.cc',
