@@ -766,7 +766,7 @@ void XmlNode::Initialize(Local<Object> target) {
 
   Nan::SetPrototypeMethod(tmpl, "toString", XmlNode::ToString);
 
-  XmlFraternalNode::Initialize();
+  XmlNonAttributeNode::Initialize();
   XmlElement::Initialize(target);
   XmlText::Initialize(target);
   XmlComment::Initialize(target);
