@@ -89,6 +89,14 @@ NAN_METHOD(XmlFraternalNode::AddNextSibling) {
   return info.GetReturnValue().Set(info[0]);
 }
 
+NAN_METHOD(XmlFraternalNode::Path) {
+  Nan::HandleScope scope;
+  XmlFraternalNode *node = Nan::ObjectWrap::Unwrap<XmlFraternalNode>(info.Holder());
+  assert(node);
+
+  return info.GetReturnValue().Set(node->get_path());
+}
+
 void
 XmlFraternalNode::set_content(const char* content) {
   xmlChar *encoded = xmlEncodeSpecialChars(xml_obj->doc, (const xmlChar*)content);
@@ -208,6 +216,10 @@ XmlFraternalNode::Initialize()
     Nan::SetPrototypeMethod(tmpl,
             "addNextSibling",
             XmlFraternalNode::AddNextSibling);
+
+    Nan::SetPrototypeMethod(tmpl,
+            "path",
+            XmlFraternalNode::Path);
 
 }
 
