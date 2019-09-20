@@ -1,6 +1,6 @@
 environment:
   github_release_token:
-    secure: en/UnoFHA3RsSAHM5c6zb3RAMa4V01lC3pYG1YrHSeOPFu78SUA/0lOjNe3pp8RG
+    secure: fNm9+m4cngLwXcaUAk0vTM7Dp3pwjzU0H6tTb9YA+6Yh5Xng4fpSHIl257+H8mHB
   matrix:
 
       # Node v0.10, MSVS 2013
