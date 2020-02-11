@@ -4,6 +4,7 @@
       'target_name': 'xmljs',
       'product_extension': 'node',
       'type': 'shared_library',
+      'defines': [ 'BUILDING_NODE_EXTENSION' ],
       'include_dirs': [
         'vendor/libxml/include',
         "<!(node -e \"require('nan')\")"
