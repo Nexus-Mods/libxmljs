@@ -2,12 +2,11 @@
 #define SRC_XML_TEXT_H_
 
 #include "libxmljs.h"
-#include "xml_non_attribute_node.h"
 #include "xml_node.h"
 
 namespace libxmljs {
 
-class XmlText : public XmlNonAttributeNode {
+class XmlText : public XmlNode {
 public:
   explicit XmlText(xmlNode *node);
 
@@ -22,6 +21,8 @@ protected:
   static NAN_METHOD(New);
   static NAN_METHOD(Text);
   static NAN_METHOD(Replace);
+  static NAN_METHOD(Path);
+  static NAN_METHOD(Name);
 
   static NAN_METHOD(NextElement);
   static NAN_METHOD(PrevElement);
@@ -31,6 +32,8 @@ protected:
   v8::Local<v8::Value> get_next_element();
   v8::Local<v8::Value> get_prev_element();
   v8::Local<v8::Value> get_content();
+  v8::Local<v8::Value> get_path();
+  v8::Local<v8::Value> get_name();
   void set_content(const char *content);
   void replace_text(const char *content);
   void replace_element(xmlNode *element);

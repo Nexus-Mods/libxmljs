@@ -18,7 +18,6 @@
         'src/libxmljs.cc',
         'src/xml_attribute.cc',
         'src/xml_document.cc',
-        'src/xml_non_attribute_node.cc',
         'src/xml_element.cc',
         'src/xml_comment.cc',
         'src/xml_namespace.cc',

@@ -3,12 +3,11 @@
 #define SRC_XML_ELEMENT_H_
 
 #include "libxmljs.h"
-#include "xml_non_attribute_node.h"
 #include "xml_node.h"
 
 namespace libxmljs {
 
-class XmlElement : public XmlNonAttributeNode {
+class XmlElement : public XmlNode {
 public:
   explicit XmlElement(xmlNode *node);
 

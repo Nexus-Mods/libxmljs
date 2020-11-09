@@ -146,7 +146,7 @@ NAN_METHOD(XmlElement::AddCData) {
       xmlNewCDataBlock(element->xml_obj->doc, (const xmlChar *)content,
                        xmlStrlen((const xmlChar *)content));
 
-  element->add_child(elem);
+  element->add_cdata(elem);
   return info.GetReturnValue().Set(info.Holder());
 }
 

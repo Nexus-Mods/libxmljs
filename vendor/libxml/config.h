@@ -146,11 +146,7 @@
 #endif
 
 /* Define to 1 if you have the `snprintf' function. */
-#if defined(_WIN32) && _MSC_VER >= 1900
 #define HAVE_SNPRINTF 1
-#else
-#define snprintf _snprintf
-#endif
 
 /* Define to 1 if you have the `sprintf' function. */
 #define HAVE_SPRINTF 1
