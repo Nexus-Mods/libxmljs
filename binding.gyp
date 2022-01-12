@@ -68,6 +68,11 @@
         'vendor/libxml/xpointer.c'
       ],
       'conditions': [
+        ['OS=="win"', {
+          'defines': [
+            'BUILDING_NODE_EXTENSION',
+          ],
+        }],
         ['OS=="mac"', {
           # node-gyp 2.x doesn't add this anymore
           # https://github.com/TooTallNate/node-gyp/pull/612
