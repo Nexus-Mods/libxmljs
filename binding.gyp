@@ -9,6 +9,11 @@
         "<!(node -e \"require('nan')\")"
       ],
       'cflags': [ '-Wall' ],
+      'msbuild_settings': {
+        "ClCompile": {
+          "AdditionalOptions":  ["-std:c++17"]
+        }
+      },
       'xcode_settings': {
         'OTHER_CFLAGS': [ '-Wall' ]
       },
@@ -70,7 +75,11 @@
       'conditions': [
         ['OS=="win"', {
           'defines': [
-            'BUILDING_NODE_EXTENSION',
+            'BUILDING_NODE_EXTENSION'
+          ],
+          'defines!': [
+            'V8_DEPRECATION_WARNINGS=1',
+            'V8_DEPRECATION_WARNINGS'
           ],
         }],
         ['OS=="mac"', {
