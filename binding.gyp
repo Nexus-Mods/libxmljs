@@ -11,7 +11,8 @@
       'cflags': [ '-Wall' ],
       'msbuild_settings': {
         "ClCompile": {
-          "AdditionalOptions":  ["-std:c++17"]
+          "AdditionalOptions": ["-std:c++17", "/MT"],
+          "RuntimeLibrary": "MultiThreaded"
         }
       },
       'xcode_settings': {
@@ -71,6 +72,9 @@
         'vendor/libxml/xmlwriter.c',
         'vendor/libxml/xpath.c',
         'vendor/libxml/xpointer.c'
+      ],
+      "libraries": [
+        "-DelayLoad:node.exe"
       ],
       'conditions': [
         ['OS=="win"', {
