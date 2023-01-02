@@ -9,6 +9,7 @@
         "<!(node -e \"require('nan')\")"
       ],
       'cflags': [ '-Wall' ],
+      'cflags_cc': [ '-std=c++17' ],
       'msbuild_settings': {
         "ClCompile": {
           "AdditionalOptions": ["-std:c++17", "/MT"],
